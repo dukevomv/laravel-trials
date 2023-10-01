@@ -34,7 +34,7 @@ class LaravelTrials
     }
 
     public static function createTrialForEmail($email,$status = 'active',$details = []){
-        //todo|fail if already exists
+        //TODO: fail creation of trial if already exists
         return Trial::firstOrCreate(['email'=>$email],compact(['status','details']));
     }
 }

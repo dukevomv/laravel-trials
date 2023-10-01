@@ -28,7 +28,6 @@ class MainTestCase extends TestCase
     public function defineEnvironment($app)
     {
         self::initializeConfig($app);
-        $app['config']->set('laravel-trials.enabled', true);
         $app['config']->set('database.default', 'sqlite');
         $app['config']->set('database.connections.sqlite', [
                                                            'driver'                  => 'sqlite',
