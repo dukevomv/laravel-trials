@@ -1,0 +1,54 @@
+{
+    "name": "dukevomv/laravel-trials",
+    "description": "Add Trial mode to your database through Global scopes and Polymorph relations",
+    "keywords": [
+        "dukevomv",
+        "laravel-trials"
+    ],
+    "homepage": "https://github.com/dukevomv/laravel-trials",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Duke Vomvyras",
+            "email": "dukevomv@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dukevomv\\LaravelTrials\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dukevomv\\LaravelTrials\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dukevomv\\LaravelTrials\\LaravelTrialsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelTrials": "Dukevomv\\LaravelTrials\\LaravelTrialsFacade"
+            }
+        }
+    }
+}
